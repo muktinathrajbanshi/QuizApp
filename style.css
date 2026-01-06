@@ -9,6 +9,72 @@ body {
   height: 100vh;
 }
 
+.quiz {
+  width: 40rem;
+  height: 40rem;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem 5rem;
+}
+
+li {
+  list-style: none;
+  min-width: 40%;
+  min-height: 7rem;
+  border-radius: 7rem;
+  -webkit-border-radius: 7rem;
+  -moz-border-radius: 7rem;
+  -ms-border-radius: 7rem;
+  -o-border-radius: 7rem;
+  border: 0.2rem solid rgb(224, 224, 224);
+  padding: 0 7rem 0 3rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  padding-left: 1rem;
+}
+
+/* increase the size of radio button  */
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+}
+
+/* style the appearance of the radio button  */
+input[type="radio"]:checked {
+  background-color: #8ec5fc; /*change the background color when selected */
+  border-color: #8ec5fc; /*change the border color when selected */
+}
+
+.btn {
+  padding: 2rem 5rem;
+}
+
+button {
+  padding: 0 5rem;
+  height: 5rem;
+  border-radius: 5rem;
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
+  -ms-border-radius: 5rem;
+  -o-border-radius: 5rem;
+  background-color: #7090e7;
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
+}
+
 .result {
   width: 100%;
   height: auto;
