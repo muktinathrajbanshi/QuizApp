@@ -81,3 +81,14 @@ const submitBtn = document.querySelector("#submit");
 const currentQuiz = 0;
 const score = 0;
 
+//? Step 3: Load Quiz Function
+
+const loadQuiz = () => {
+    const {question, options} = quizData[currentQuiz];
+    console.log(question);
+
+    questionElm.innerText = question;
+    
+}
+
+loadQuiz();
