@@ -85,9 +85,12 @@ const score = 0;
 
 const loadQuiz = () => {
     const {question, options} = quizData[currentQuiz];
-    console.log(question);
+    console.log(options);
 
     questionElm.innerText = question;
+    // options.forEach((curOption, index) => (option_1.innerText = curOption));
+
+    options.forEach((curOption, index) => window[`option_${index + 1}`].innerText = curOption);
     
 }
 
