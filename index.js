@@ -89,9 +89,25 @@ const loadQuiz = () => {
 
     questionElm.innerText = question;
     // options.forEach((curOption, index) => (option_1.innerText = curOption));
-
     options.forEach((curOption, index) => window[`option_${index + 1}`].innerText = curOption);
-    
-}
+};
 
 loadQuiz();
+
+//? Step 4: Get Selected Answer Function on Button click
+
+const getSelectedOption = () => {
+  let ans_index;
+  answerElm.forEach((curOption, index) => {
+    if(curOption.checked) { 
+      ans_index = index; 
+    }
+  });
+  return ans_index;
+};
+
+submitBtn.addEventListener("click", () => {
+  const selectedOptionIndex = getSelectedOption();
+  console.log(selectedOptionIndex);
+  
+})
