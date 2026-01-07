@@ -68,3 +68,16 @@ const quizData = [
   },
 ];
 
+//? Step 2: JavaScript Initialization
+
+const answerElm = document.querySelectorAll(".answer");
+const [questionElm, option_1, option_2, option_3, option_4] = 
+document.querySelectorAll(
+    "#question, #option_1, #option_2, #option_3, #option_4"
+);
+
+const submitBtn = document.querySelector("#submit");
+
+const currentQuiz = 0;
+const score = 0;
+
