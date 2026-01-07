@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+h2 {
+  text-align: left;
+  color: #fff;
+  padding: 1rem 1rem;
+  text-transform: capitalize;
+}
+
 .quiz-section {
   display: flex;
   justify-content: center;
@@ -22,37 +29,36 @@
 
 .quiz {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: left;
   flex-direction: column;
-  /* background-color: #fff; */
-  border: 3px solid blue;
+  background-color: #828ca3;
 }
 
 ul {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: left;
+  align-items: start;
   flex-direction: column;
   gap: 2rem;
-  padding: 4rem 5rem;
+  padding: 4rem 5rem 4rem 1rem;
 }
 
 li {
   list-style: none;
-  min-width: 4rem;
-  min-height: 2rem;
-  border-radius: 7rem;
-  -webkit-border-radius: 7rem;
-  -moz-border-radius: 7rem;
-  -ms-border-radius: 7rem;
-  -o-border-radius: 7rem;
+  min-width: 3.5rem;
+  min-height: 3.5rem;
+  border-radius: 5rem;
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
+  -ms-border-radius: 5rem;
+  -o-border-radius: 5rem;
   border: 0.2rem solid rgb(224, 224, 224);
   padding: 0 7rem 0 3rem;
   font-size: 1.2rem;
   font-weight: bold;
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  /* border: 1px solid red; */
   align-items: center;
 }
 
@@ -75,12 +81,11 @@ input[type="radio"]:checked {
 }
 
 .btn {
-  padding: 2rem 5rem;
+  padding: 0.5rem 1rem;
 }
 
 button {
-  padding: 0 5rem;
-  height: 5rem;
+  padding: 0.5rem 1rem;
   border-radius: 5rem;
   -webkit-border-radius: 5rem;
   -moz-border-radius: 5rem;
@@ -89,7 +94,7 @@ button {
   background-color: #7090e7;
   border: none;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 .result {
