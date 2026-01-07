@@ -42,11 +42,6 @@ const quizData = [
     correct: 1,
   },
   {
-    question: "Which symbol is used for single-line comments in JavaScript?",
-    options: ["<!-- -->", "/* */", "//", "#"],
-    correct: 2,
-  },
-  {
     question: "Which HTML attribute is used to provide alternative text for an image?",
     options: ["title", "alt", "src", "href"],
     correct: 1,
@@ -56,20 +51,11 @@ const quizData = [
     options: ["Grid", "Flexbox", "Float", "Position"],
     correct: 1,
   },
-  {
-    question: "Which JavaScript function is used to select an element by ID?",
-    options: [
-      "getElementById()",
-      "querySelectorAll()",
-      "getElementsByClass()",
-      "selectById()",
-    ],
-    correct: 0,
-  },
+  
 ];
 
 //? Step 2: JavaScript Initialization
-
+const quizZ = document.querySelector("#quiz");
 const answerElm = document.querySelectorAll(".answer");
 const [questionElm, option_1, option_2, option_3, option_4] = 
 document.querySelectorAll(
@@ -78,8 +64,8 @@ document.querySelectorAll(
 
 const submitBtn = document.querySelector("#submit");
 
-const currentQuiz = 0;
-const score = 0;
+let currentQuiz = 0;
+let score = 0;
 
 //? Step 3: Load Quiz Function
 
@@ -87,7 +73,7 @@ const loadQuiz = () => {
     const {question, options} = quizData[currentQuiz];
     console.log(options);
 
-    questionElm.innerText = question;
+    questionElm.innerText = `${currentQuiz + 1}: ${question}`
     // options.forEach((curOption, index) => (option_1.innerText = curOption));
     options.forEach((curOption, index) => window[`option_${index + 1}`].innerText = curOption);
 };
@@ -110,8 +96,33 @@ const getSelectedOption = () => {
 
 };
 
+// deselectedAnswers
+
+const deselectedAnswers = () => {
+  return answerElm.forEach((curElm) => curElm.checked = false);
+};
+
 submitBtn.addEventListener("click", () => {
   const selectedOptionIndex = getSelectedOption();
   console.log(selectedOptionIndex);
-  
-})
+
+  if(selectedOptionIndex === quizData[currentQuiz].correct) {
+    // score += 1;
+     score = score + 1;
+  }
+
+  currentQuiz++;
+
+  if(currentQuiz < quizData.length) {
+    deselectedAnswers();
+    loadQuiz();
+  } else {
+    quizZ.innerHTML = `
+      <div className="result">
+        <h2>🏆 Your Score: ${score}/${quizData.length} Correct Answers</h2>
+        <p>Congratulations on completing the quiz! 🎉</p>
+        <button className="reload-button" onClick="location.reload()">Play Again ♻</button>
+      </div>
+    `;
+  }
+});
