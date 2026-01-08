@@ -11,13 +11,14 @@ h2 {
   color: #fff;
   padding: 1rem 1rem;
   text-transform: capitalize;
+  margin: 0;
 }
 
 .quiz-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-image: linear-gradient(
     to bottom,
@@ -31,18 +32,21 @@ h2 {
 
 #quiz {
   display: flex;
-  text-align: left;
   flex-direction: column;
   background-color: #828ca3;
+  width: 600px;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 1rem;
 }
 
 ul {
   display: flex;
-  justify-content: left;
-  align-items: start;
+  gap: 1.5rem;
   flex-direction: column;
-  gap: 2rem;
   padding: 4rem 5rem 4rem 1rem;
+  flex: 1;
+  overflow-y: auto;
 }
 
 li {
@@ -60,7 +64,6 @@ li {
   font-weight: bold;
   display: flex;
   justify-content: left;
-  /* border: 1px solid red; */
   align-items: center;
 }
 
