@@ -41,6 +41,16 @@ const quizData = [
     ],
     correct: 1,
   },
+   {
+    question: "Which symbol is used for single-line comments in JavaScript?",
+    options: ["<!-- -->", "/* */", "//", "#"],
+    correct: 2,
+  },
+  {
+    question: "Which CSS property is used to make text bold?",
+    options: ["font-style", "font-weight", "text-weight", "bold"],
+    correct: 1,
+  },
   {
     question: "Which HTML attribute is used to provide alternative text for an image?",
     options: ["title", "alt", "src", "href"],
