@@ -118,9 +118,15 @@ button {
   gap: 1.5rem;
 }
 
-.result h2,
-.score {
+.result h2 {
   font-size: 3.4rem;
+}
+
+.score {
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  color: #130f40;
+  font-weight: bolder;
 }
 
 .result p {

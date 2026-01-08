@@ -66,6 +66,7 @@ const quizData = [
 
 //? Step 2: JavaScript Initialization
 const quiz = document.querySelector("#quiz");
+const scores = document.querySelector(".score");
 const answerElm = document.querySelectorAll(".answer");
 const [questionElm, option_1, option_2, option_3, option_4] = 
 document.querySelectorAll(
@@ -84,6 +85,7 @@ const loadQuiz = () => {
     console.log(options);
 
     questionElm.innerText = `${currentQuiz + 1}: ${question}`
+    scores.innerText = `Score: ${score}/${quizData.length}`
     // options.forEach((curOption, index) => (option_1.innerText = curOption));
     options.forEach((curOption, index) => window[`option_${index + 1}`].innerText = curOption);
 };
