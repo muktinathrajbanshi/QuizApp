@@ -27,7 +27,7 @@ h2 {
   );
 }
 
-.quiz {
+#quiz {
   display: flex;
   text-align: left;
   flex-direction: column;
@@ -100,8 +100,8 @@ button {
 .result {
   width: 100%;
   height: auto;
-  padding: 5rem;
-  background-color: #fff;
+  padding: 2rem;
+  background-color: #7090e7;
   border-radius: 0.5rem;
   -webkit-border-radius: 0.5rem;
   -moz-border-radius: 0.5rem;
@@ -109,15 +109,22 @@ button {
   -o-border-radius: 0.5rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 2.4rem;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.result h2 {
+.result h2,
+.score {
   font-size: 3.4rem;
 }
 
 .result p {
+  text-align: center;
   font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem;
 }

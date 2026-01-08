@@ -55,7 +55,7 @@ const quizData = [
 ];
 
 //? Step 2: JavaScript Initialization
-const quizZ = document.querySelector("#quiz");
+const quiz = document.querySelector("#quiz");
 const answerElm = document.querySelectorAll(".answer");
 const [questionElm, option_1, option_2, option_3, option_4] = 
 document.querySelectorAll(
@@ -117,11 +117,11 @@ submitBtn.addEventListener("click", () => {
     deselectedAnswers();
     loadQuiz();
   } else {
-    quizZ.innerHTML = `
-      <div className="result">
+    quiz.innerHTML = `
+      <div class="result">
         <h2>🏆 Your Score: ${score}/${quizData.length} Correct Answers</h2>
         <p>Congratulations on completing the quiz! 🎉</p>
-        <button className="reload-button" onClick="location.reload()">Play Again ♻</button>
+        <button class="reload-button" onClick="location.reload()">Play Again ♻</button>
       </div>
     `;
   }
