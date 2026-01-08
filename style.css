@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&family=Flamenco&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,500;1,500&family=Pacifico&family=Piazzolla:ital,opsz,wght@0,8..30,100..900;1,8..30,100..900&family=Poppins:wght@500;600;700;800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -95,6 +97,7 @@ button {
   border: none;
   color: #fff;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .result {
@@ -122,9 +125,22 @@ button {
 
 .result p {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-left: 1rem;
+  color: #d35400;
+  font-family: "Dancing Script", cursive;
+}
+
+.reload-button {
+  padding: 0.5rem 1rem;
+  background-color: #e67e22;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+  cursor: pointer;
 }
